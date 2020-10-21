@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>Infected.qml</file>
+        <file>Intro.qml</file>
+        <file>Cumulative.qml</file>
+    </qresource>
+</RCC>
