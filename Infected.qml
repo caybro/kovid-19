@@ -106,6 +106,10 @@ Page {
             id: yAxis
             labelFormat: "%.0d"
             titleText: qsTr("Number of ppl")
+            tickType: ValueAxis.TicksDynamic
+            tickInterval: 1000
+            tickAnchor: 0
+            minorTickCount: 1
         }
 
         LineSeries {
