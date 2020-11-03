@@ -27,9 +27,11 @@ Page {
         infectedSeries.clear();
         curedSeries.clear();
         deceasedSeries.clear();
+        testedSeries.clear();
         var infArr = Array();
         var curedArr = Array();
         var decArr = Array();
+        var testedArr = Array();
         var datesArr = Array();
 
         var yesterday = new Date();
@@ -44,6 +46,7 @@ Page {
             const inf = datapoint.kumulativni_pocet_nakazenych;
             const cured = datapoint.kumulativni_pocet_vylecenych;
             const dec = datapoint.kumulativni_pocet_umrti;
+            const tested = datapoint.kumulativni_pocet_testu;
 
             if (range === 7) {
                 if (datum <= lastWeek)
@@ -65,6 +68,8 @@ Page {
             curedSeries.append(datum, cured);
             decArr.push(dec);
             deceasedSeries.append(datum, dec);
+            testedArr.push(tested);
+            testedSeries.append(datum, tested);
         }
 
         // set min/max values for the date (x) axis
@@ -72,8 +77,8 @@ Page {
         xAxis.max = new Date(Math.max(...datesArr));
 
         // set min/max for the values (y) axis
-        yAxis.min = Math.min(...infArr, ...curedArr, ...decArr);
-        yAxis.max = Math.max(...infArr, ...curedArr, ...decArr);
+        yAxis.min = Math.min(...infArr, ...curedArr, ...decArr, ...testedArr);
+        yAxis.max = Math.max(...infArr, ...curedArr, ...decArr, ...testedArr);
     }
 
     function handleHovered(point, state, series) {
@@ -157,6 +162,21 @@ Page {
             color: "#000001" // "black" not accepted here :o
             width: 3
             onHovered: handleHovered(point, state, deceasedSeries)
+            pointsVisible: rangeCombo.currentValue > 0
+            pointLabelsVisible: rangeCombo.currentValue === 7 || rangeCombo.currentValue === 14
+            pointLabelsClipping: false
+            pointLabelsFormat: "@yPoint"
+            pointLabelsFont.pixelSize: Qt.application.font.pixelSize // hidpi oh yeah :D
+        }
+
+        LineSeries {
+            id: testedSeries
+            axisX: xAxis
+            axisY: yAxis
+            name: qsTr("Tested")
+            color: "blue"
+            width: 3
+            onHovered: handleHovered(point, state, testedSeries)
             pointsVisible: rangeCombo.currentValue > 0
             pointLabelsVisible: rangeCombo.currentValue === 7 || rangeCombo.currentValue === 14
             pointLabelsClipping: false

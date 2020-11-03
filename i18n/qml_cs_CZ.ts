@@ -14,47 +14,52 @@
         <translation>Kumulativní počty nakažených lidí - %1</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="110"/>
+        <location filename="../Cumulative.qml" line="115"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="117"/>
+        <location filename="../Cumulative.qml" line="122"/>
         <source>Number of ppl</source>
         <translation>Počet lidí</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="125"/>
+        <location filename="../Cumulative.qml" line="131"/>
         <source>Infected</source>
         <translation>Nakažených</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="140"/>
+        <location filename="../Cumulative.qml" line="146"/>
         <source>Cured</source>
         <translation>Vyléčených</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="155"/>
+        <location filename="../Cumulative.qml" line="161"/>
         <source>Deceased</source>
         <translation>Zemřelých</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="175"/>
+        <location filename="../Cumulative.qml" line="176"/>
+        <source>Tested</source>
+        <translation>Testovaných</translation>
+    </message>
+    <message>
+        <location filename="../Cumulative.qml" line="196"/>
         <source>Everything</source>
         <translation>Vše</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="179"/>
+        <location filename="../Cumulative.qml" line="200"/>
         <source>Last Month</source>
         <translation>Poslední měsíc</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="183"/>
+        <location filename="../Cumulative.qml" line="204"/>
         <source>Last 14 Days</source>
         <translation>Poslední 2 týdny</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="187"/>
+        <location filename="../Cumulative.qml" line="208"/>
         <source>Last Week</source>
         <translation>Poslední týden</translation>
     </message>
@@ -77,7 +82,7 @@
         <translation>Počet lidí</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="115"/>
+        <location filename="../Infected.qml" line="119"/>
         <source>Infected ppl</source>
         <translation>Nakažených</translation>
     </message>
@@ -91,22 +96,22 @@
         <translation>Přírůstky počtů nakažených lidí - %1</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="135"/>
+        <location filename="../Infected.qml" line="139"/>
         <source>Everything</source>
         <translation>Vše</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="139"/>
+        <location filename="../Infected.qml" line="143"/>
         <source>Last Month</source>
         <translation>Poslední měsíc</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="143"/>
+        <location filename="../Infected.qml" line="147"/>
         <source>Last 14 Days</source>
         <translation>Poslední 2 týdny</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="147"/>
+        <location filename="../Infected.qml" line="151"/>
         <source>Last Week</source>
         <translation>Poslední týden</translation>
     </message>
