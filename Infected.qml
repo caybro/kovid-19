@@ -28,23 +28,24 @@ Page {
         var incrArr = Array();
         var datesArr = Array();
 
-        const today = new Date();
-        const lastWeek = new Date().setDate(today.getDate() - 7);
-        const last2Weeks = new Date().setDate(today.getDate() - 14);
-        const lastMonth = new Date().setMonth(today.getMonth() - 1);
+        var yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        const lastWeek = new Date().setDate(yesterday.getDate() - 7);
+        const last2Weeks = new Date().setDate(yesterday.getDate() - 14);
+        const lastMonth = new Date().setMonth(yesterday.getMonth() - 1);
 
         for (var i in priv.dataCache.data) {
             const datapoint = priv.dataCache.data[i];
             const datum = Date.parse(datapoint.datum);
 
             if (range === 7) {
-                if (datum < lastWeek)
+                if (datum <= lastWeek)
                     continue;
             } else if (range === 14) {
-                if (datum < last2Weeks)
+                if (datum <= last2Weeks)
                     continue;
             } else if (range === 30) {
-                if (datum < lastMonth)
+                if (datum <= lastMonth)
                     continue;
             } else if (range !== -1) {
                 continue;
