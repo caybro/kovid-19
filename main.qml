@@ -5,8 +5,8 @@ import Qt.labs.settings 1.0
 
 ApplicationWindow {
     id: window
-    width: 640
-    height: 480
+    width: 800
+    height: 600
     visible: true
 
     header: ToolBar {
@@ -27,6 +27,7 @@ ApplicationWindow {
 
         Label {
             text: stackView.currentItem.title
+            font.pixelSize: Qt.application.font.pixelSize * 1.2
             anchors.centerIn: parent
         }
     }
