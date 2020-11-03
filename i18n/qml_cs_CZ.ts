@@ -43,17 +43,17 @@
         <translation type="vanished">Přírůstky počtů nakažených lidí</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="99"/>
+        <location filename="../Infected.qml" line="100"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="107"/>
+        <location filename="../Infected.qml" line="108"/>
         <source>Number of ppl</source>
         <translation>Počet lidí</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="114"/>
+        <location filename="../Infected.qml" line="115"/>
         <source>Infected ppl</source>
         <translation>Infikovaní</translation>
     </message>
@@ -67,22 +67,22 @@
         <translation>Přírůstky počtů nakažených lidí - %1</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="130"/>
+        <location filename="../Infected.qml" line="131"/>
         <source>Everything</source>
         <translation>Vše</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="134"/>
+        <location filename="../Infected.qml" line="135"/>
         <source>Last Month</source>
         <translation>Poslední měsíc</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="138"/>
+        <location filename="../Infected.qml" line="139"/>
         <source>Last 14 Days</source>
         <translation>Poslední 2 týdny</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="142"/>
+        <location filename="../Infected.qml" line="143"/>
         <source>Last Week</source>
         <translation>Poslední týden</translation>
     </message>
@@ -144,7 +144,12 @@
         <translation>Potvrzených případů včera: %L1</translation>
     </message>
     <message>
-        <location filename="../Intro.qml" line="79"/>
+        <location filename="../Intro.qml" line="32"/>
+        <source>Confirmed cases today: %L1</source>
+        <translation>Potvrzených případů dnes: %L1</translation>
+    </message>
+    <message>
+        <location filename="../Intro.qml" line="84"/>
         <source>Dataset by %1</source>
         <translation>Datová sada: %1</translation>
     </message>

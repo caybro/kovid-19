@@ -29,6 +29,7 @@ Page {
             inHospital.text = qsTr("Currently in hospital: %L1").arg(datapoint.aktualne_hospitalizovani);
             testsYesterday.text = qsTr("Tests yesterday: %L1").arg(datapoint.provedene_testy_vcerejsi_den);
             casesYesterday.text = qsTr("Confirmed cases yesterday: %L1").arg(datapoint.potvrzene_pripady_vcerejsi_den);
+            casesToday.text = qsTr("Confirmed cases today: %L1").arg(datapoint.potvrzene_pripady_dnesni_den);
         }
     }
 
@@ -72,6 +73,10 @@ Page {
 
         Label {
             id: casesYesterday
+        }
+
+        Label {
+            id: casesToday
         }
 
         Label {
