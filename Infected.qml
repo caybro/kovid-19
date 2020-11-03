@@ -104,7 +104,7 @@ Page {
 
         ValueAxis {
             id: yAxis
-            //labelFormat: "d"
+            labelFormat: "%.0d"
             titleText: qsTr("Number of ppl")
         }
 

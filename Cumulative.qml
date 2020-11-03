@@ -90,7 +90,7 @@ Page {
         ValueAxis {
             id: yAxis
             titleText: qsTr("Number of ppl")
-            //labelFormat: "%i"
+            labelFormat: "%.0d"
         }
 
         LineSeries {
