@@ -117,6 +117,10 @@ Page {
             pointsVisible: rangeCombo.currentValue > 0
             width: rangeCombo.currentValue > 0 ? 3 : 2
             onHovered: handleHovered(point, state, incrementalSeries)
+            pointLabelsVisible: rangeCombo.currentValue === 7 || rangeCombo.currentValue === 14
+            pointLabelsClipping: false
+            pointLabelsFormat: "@yPoint"
+            pointLabelsFont.pixelSize: Qt.application.font.pixelSize // hidpi oh yeah :D
         }
     }
 
