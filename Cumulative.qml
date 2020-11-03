@@ -109,6 +109,7 @@ Page {
         antialiasing: true
         localizeNumbers: true
         theme: ChartView.ChartThemeBlueNcs
+        animationOptions: ChartView.SeriesAnimations
 
         DateTimeAxis {
             id: xAxis

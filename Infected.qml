@@ -94,6 +94,7 @@ Page {
         localizeNumbers: true
         theme: ChartView.ChartThemeBlueNcs
         legend.markerShape: Legend.MarkerShapeFromSeries
+        animationOptions: ChartView.SeriesAnimations
 
         DateTimeAxis {
             id: xAxis
