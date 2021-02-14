@@ -9,57 +9,114 @@
         <translation type="vanished">Kumulativní počty nakažených lidí</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="7"/>
         <source>Cumulative numbers of infected people - %1</source>
-        <translation>Kumulativní počty nakažených lidí - %1</translation>
+        <translation type="vanished">Kumulativní počty nakažených lidí - %1</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="115"/>
+        <location filename="../Cumulative.qml" line="7"/>
+        <source>Cumulative numbers of infected people — %1</source>
+        <translation>Kumulativní počty nakažených lidí — %1</translation>
+    </message>
+    <message>
+        <location filename="../Cumulative.qml" line="116"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="122"/>
+        <location filename="../Cumulative.qml" line="123"/>
         <source>Number of ppl</source>
         <translation>Počet lidí</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="131"/>
+        <location filename="../Cumulative.qml" line="132"/>
         <source>Infected</source>
         <translation>Nakažených</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="146"/>
+        <location filename="../Cumulative.qml" line="147"/>
         <source>Cured</source>
         <translation>Vyléčených</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="161"/>
+        <location filename="../Cumulative.qml" line="162"/>
         <source>Deceased</source>
         <translation>Zemřelých</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="176"/>
+        <location filename="../Cumulative.qml" line="177"/>
         <source>Tested</source>
         <translation>Testovaných</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="196"/>
+        <location filename="../Cumulative.qml" line="197"/>
         <source>Everything</source>
         <translation>Vše</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="200"/>
+        <location filename="../Cumulative.qml" line="201"/>
         <source>Last Month</source>
         <translation>Poslední měsíc</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="204"/>
+        <location filename="../Cumulative.qml" line="205"/>
         <source>Last 14 Days</source>
         <translation>Poslední 2 týdny</translation>
     </message>
     <message>
-        <location filename="../Cumulative.qml" line="208"/>
+        <location filename="../Cumulative.qml" line="209"/>
+        <source>Last Week</source>
+        <translation>Poslední týden</translation>
+    </message>
+</context>
+<context>
+    <name>Hospitalized</name>
+    <message>
+        <location filename="../Hospitalized.qml" line="7"/>
+        <source>Number of people in hospital — %1</source>
+        <translation>Počet lidí v nemocnici — %1</translation>
+    </message>
+    <message>
+        <location filename="../Hospitalized.qml" line="70"/>
+        <source>Without symptoms</source>
+        <translation>Bez příznaků</translation>
+    </message>
+    <message>
+        <location filename="../Hospitalized.qml" line="71"/>
+        <source>Light symptoms</source>
+        <translation>Lehké příznaky</translation>
+    </message>
+    <message>
+        <location filename="../Hospitalized.qml" line="72"/>
+        <source>Medium symptoms</source>
+        <translation>Střední příznaky</translation>
+    </message>
+    <message>
+        <location filename="../Hospitalized.qml" line="73"/>
+        <source>Severe symptoms</source>
+        <translation>Težké příznaky</translation>
+    </message>
+    <message>
+        <location filename="../Hospitalized.qml" line="89"/>
+        <source>Date</source>
+        <translation>Datum</translation>
+    </message>
+    <message>
+        <location filename="../Hospitalized.qml" line="117"/>
+        <source>Everything</source>
+        <translation>Vše</translation>
+    </message>
+    <message>
+        <location filename="../Hospitalized.qml" line="121"/>
+        <source>Last Month</source>
+        <translation>Poslední měsíc</translation>
+    </message>
+    <message>
+        <location filename="../Hospitalized.qml" line="125"/>
+        <source>Last 14 Days</source>
+        <translation>Poslední 2 týdny</translation>
+    </message>
+    <message>
+        <location filename="../Hospitalized.qml" line="129"/>
         <source>Last Week</source>
         <translation>Poslední týden</translation>
     </message>
@@ -72,17 +129,17 @@
         <translation type="vanished">Přírůstky počtů nakažených lidí</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="100"/>
+        <location filename="../Infected.qml" line="101"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="108"/>
+        <location filename="../Infected.qml" line="109"/>
         <source>Number of ppl</source>
         <translation>Počet lidí</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="119"/>
+        <location filename="../Infected.qml" line="120"/>
         <source>Infected ppl</source>
         <translation>Nakažených</translation>
     </message>
@@ -91,27 +148,31 @@
         <translation type="vanished">Přírůstky</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="7"/>
         <source>Incremental number of infected people - %1</source>
-        <translation>Přírůstky počtů nakažených lidí - %1</translation>
+        <translation type="vanished">Přírůstky počtů nakažených lidí - %1</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="139"/>
+        <location filename="../Infected.qml" line="7"/>
+        <source>Incremental number of infected people — %1</source>
+        <translation>Přírůstky počtů nakažených lidí — %1</translation>
+    </message>
+    <message>
+        <location filename="../Infected.qml" line="140"/>
         <source>Everything</source>
         <translation>Vše</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="143"/>
+        <location filename="../Infected.qml" line="144"/>
         <source>Last Month</source>
         <translation>Poslední měsíc</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="147"/>
+        <location filename="../Infected.qml" line="148"/>
         <source>Last 14 Days</source>
         <translation>Poslední 2 týdny</translation>
     </message>
     <message>
-        <location filename="../Infected.qml" line="151"/>
+        <location filename="../Infected.qml" line="152"/>
         <source>Last Week</source>
         <translation>Poslední týden</translation>
     </message>
@@ -119,13 +180,17 @@
 <context>
     <name>Intro</name>
     <message>
-        <location filename="../Intro.qml" line="6"/>
         <source>COVID-19 Overview</source>
-        <translation>Přehled Covid 19</translation>
+        <translation type="vanished">Přehled Covid 19</translation>
     </message>
     <message>
         <source>Date: %1</source>
         <translation type="vanished">Datum: %1</translation>
+    </message>
+    <message>
+        <location filename="../Intro.qml" line="6"/>
+        <source>COVID-19 CZ Overview</source>
+        <translation>Přehled Covid 19 CZ</translation>
     </message>
     <message>
         <location filename="../Intro.qml" line="21"/>
@@ -178,7 +243,17 @@
         <translation>Potvrzených případů dnes: %L1</translation>
     </message>
     <message>
-        <location filename="../Intro.qml" line="84"/>
+        <location filename="../Intro.qml" line="33"/>
+        <source>Vaccinated yesterday: %L1</source>
+        <translation>Naočkovaných včera: %L1</translation>
+    </message>
+    <message>
+        <location filename="../Intro.qml" line="34"/>
+        <source>Vaccinated total: %L1</source>
+        <translation>Naočkovaných celkem: %L1</translation>
+    </message>
+    <message>
+        <location filename="../Intro.qml" line="52"/>
         <source>Dataset by %1</source>
         <translation>Datová sada: %1</translation>
     </message>
@@ -202,6 +277,11 @@
         <location filename="../main.qml" line="53"/>
         <source>Cumulative statistics</source>
         <translation>Kumulativní statistiky</translation>
+    </message>
+    <message>
+        <location filename="../main.qml" line="61"/>
+        <source>In Hospital</source>
+        <translation>V nemocnici</translation>
     </message>
 </context>
 </TS>

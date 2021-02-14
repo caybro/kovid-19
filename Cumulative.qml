@@ -4,7 +4,7 @@ import QtCharts 2.3
 
 Page {
     id: root
-    title: qsTr("Cumulative numbers of infected people - %1").arg(rangeCombo.currentText)
+    title: qsTr("Cumulative numbers of infected people — %1").arg(rangeCombo.currentText)
 
     QtObject {
         id: priv

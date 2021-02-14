@@ -3,7 +3,7 @@ import QtQuick.Controls 2.12
 
 Page {
     id: root
-    title: qsTr("COVID-19 Overview")
+    title: qsTr("COVID-19 CZ Overview")
 
     function downloadData() {
         var xhr = new XMLHttpRequest;
@@ -18,18 +18,20 @@ Page {
     }
 
     function parseData(jsonData) {
-        date.text = qsTr("Last updated: %1").arg(new Date(jsonData.modified).toLocaleString(Qt.locale(), Locale.LongFormat));
+        content.append(qsTr("Last updated: %1").arg(new Date(jsonData.modified).toLocaleString(Qt.locale(), Locale.LongFormat)));
         for (var i in jsonData.data) {
             const datapoint = jsonData.data[i];
-            numberOfTotalTests.text = qsTr("Total number of tests to date: %L1").arg(datapoint.provedene_testy_celkem);
-            confirmedTotalCases.text = qsTr("Total number of confirmed cases: %L1").arg(datapoint.potvrzene_pripady_celkem);
-            activeCases.text = qsTr("Active cases: %L1").arg(datapoint.aktivni_pripady);
-            healedNumber.text = qsTr("Total number of healed patients: %L1").arg(datapoint.vyleceni);
-            deceasedNumber.text = qsTr("Total number of deceased people: %L1").arg(datapoint.umrti);
-            inHospital.text = qsTr("Currently in hospital: %L1").arg(datapoint.aktualne_hospitalizovani);
-            testsYesterday.text = qsTr("Tests yesterday: %L1").arg(datapoint.provedene_testy_vcerejsi_den);
-            casesYesterday.text = qsTr("Confirmed cases yesterday: %L1").arg(datapoint.potvrzene_pripady_vcerejsi_den);
-            casesToday.text = qsTr("Confirmed cases today: %L1").arg(datapoint.potvrzene_pripady_dnesni_den);
+            content.append(qsTr("Total number of tests to date: %L1").arg(datapoint.provedene_testy_celkem));
+            content.append(qsTr("Total number of confirmed cases: %L1").arg(datapoint.potvrzene_pripady_celkem));
+            content.append(qsTr("Active cases: %L1").arg(datapoint.aktivni_pripady));
+            content.append(qsTr("Total number of healed patients: %L1").arg(datapoint.vyleceni));
+            content.append(qsTr("Total number of deceased people: %L1").arg(datapoint.umrti));
+            content.append(qsTr("Currently in hospital: %L1").arg(datapoint.aktualne_hospitalizovani));
+            content.append(qsTr("Tests yesterday: %L1").arg(datapoint.provedene_testy_vcerejsi_den));
+            content.append(qsTr("Confirmed cases yesterday: %L1").arg(datapoint.potvrzene_pripady_vcerejsi_den));
+            content.append(qsTr("Confirmed cases today: %L1").arg(datapoint.potvrzene_pripady_dnesni_den));
+            content.append(qsTr("Vaccinated yesterday: %L1").arg(datapoint.vykazana_ockovani_vcerejsi_den));
+            content.append(qsTr("Vaccinated total: %L1").arg(datapoint.vykazana_ockovani_celkem));
         }
     }
 
@@ -39,44 +41,10 @@ Page {
         anchors.fill: parent
         anchors.margins: 10
 
-        Label {
-            id: date
-        }
-
-        Label {
-            id: numberOfTotalTests
-        }
-
-        Label {
-            id: confirmedTotalCases
-        }
-
-        Label {
-            id: activeCases
-        }
-
-        Label {
-            id: healedNumber
-        }
-
-        Label {
-            id: deceasedNumber
-        }
-
-        Label {
-            id: inHospital
-        }
-
-        Label {
-            id: testsYesterday
-        }
-
-        Label {
-            id: casesYesterday
-        }
-
-        Label {
-            id: casesToday
+        TextEdit {
+            id: content
+            readOnly: true
+            selectByMouse: true
         }
 
         Label {

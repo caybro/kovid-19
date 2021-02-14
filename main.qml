@@ -56,6 +56,14 @@ ApplicationWindow {
                     drawer.close()
                 }
             }
+            ItemDelegate {
+                Layout.fillWidth: true
+                text: qsTr("In Hospital")
+                onClicked: {
+                    stackView.push("Hospitalized.qml")
+                    drawer.close()
+                }
+            }
 
             Item {
                 Layout.fillHeight: true

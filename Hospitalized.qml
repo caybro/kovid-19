@@ -4,7 +4,7 @@ import QtCharts 2.3
 
 Page {
     id: root
-    title: qsTr("Incremental number of infected people — %1").arg(rangeCombo.currentText)
+    title: qsTr("Number of people in hospital — %1").arg(rangeCombo.currentText)
 
     QtObject {
         id: priv
@@ -13,7 +13,7 @@ Page {
 
     function downloadData() {
         const xhr = new XMLHttpRequest;
-        xhr.open("GET", "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/nakaza.json");
+        xhr.open("GET", "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/hospitalizace.json");
         xhr.onreadystatechange = function() {
             if (xhr.readyState === XMLHttpRequest.DONE) {
                 priv.dataCache = JSON.parse(xhr.responseText);
@@ -24,9 +24,13 @@ Page {
     }
 
     function parseData(range = -1) {
-        incrementalSeries.clear();
-        var incrArr = Array();
+        barSeries.clear();
         var datesArr = Array();
+        var bezPriznaku = Array();
+        var lehky = Array();
+        var stredni = Array();
+        var tezky = Array();
+        var hosp = Array();
 
         var yesterday = new Date();
         yesterday.setDate(yesterday.getDate() - 1);
@@ -51,40 +55,25 @@ Page {
                 continue;
             }
 
-            const incr = datapoint.prirustkovy_pocet_nakazenych;
-            incrArr.push(incr);
-            datesArr.push(datum);
-            incrementalSeries.append(datum, incr);
+            datesArr.push(new Date(datum).toLocaleString(Qt.locale(), "d.M."));
+            bezPriznaku.push(datapoint.stav_bez_priznaku);
+            lehky.push(datapoint.stav_lehky);
+            stredni.push(datapoint.stav_stredni);
+            tezky.push(datapoint.stav_tezky);
+            hosp.push(datapoint.pocet_hosp);
         }
 
-        // set min/max values for the date (x) axis
-        xAxis.min = new Date(Math.min(...datesArr));
-        xAxis.max = new Date(Math.max(...datesArr));
+        // set max for the values (y) axis
+        yAxis.max = Math.max(...hosp) + 10;
 
-        // set min/max for the values (y) axis
-        yAxis.min = Math.min(...incrArr);
-        yAxis.max = Math.max(...incrArr);
-    }
-
-    function handleHovered(point, state, series) {
-        if (state) {
-            var pos = chart.mapToPosition(point, series);
-            tooltip.x = pos.x;
-            tooltip.y = pos.y;
-            tooltip.show("%1: %L2"
-                         .arg(new Date(point.x).toLocaleDateString(Qt.locale(), Locale.ShortFormat))
-                         .arg(Math.round(point.y)));
-        }
-        else
-            tooltip.hide();
+        xAxis.categories = datesArr;
+        barSeries.append(qsTr("Without symptoms"), bezPriznaku);
+        barSeries.append(qsTr("Light symptoms"), lehky);
+        barSeries.append(qsTr("Medium symptoms"), stredni);
+        barSeries.append(qsTr("Severe symptoms"), tezky);
     }
 
     Component.onCompleted: downloadData()
-
-    ToolTip {
-        id: tooltip
-        visible: false
-    }
 
     ChartView {
         id: chart
@@ -93,39 +82,27 @@ Page {
         antialiasing: true
         localizeNumbers: true
         theme: ChartView.ChartThemeBlueNcs
-        legend.markerShape: Legend.MarkerShapeFromSeries
         animationOptions: ChartView.SeriesAnimations
 
-        DateTimeAxis {
+        BarCategoryAxis {
             id: xAxis
             titleText: qsTr("Date")
-            tickCount: rangeCombo.currentValue > 0 ? rangeCombo.currentValue : 12
-            format: "d.M."
         }
 
         ValueAxis {
             id: yAxis
-            labelFormat: "%.0d"
-            titleText: qsTr("Number of ppl")
+            min: 0
             tickType: ValueAxis.TicksDynamic
             tickInterval: 1000
             tickAnchor: 0
-            minorTickCount: 1
+            minorTickCount: 10
         }
 
-        LineSeries {
-            id: incrementalSeries
+        StackedBarSeries {
+            id: barSeries
             axisX: xAxis
             axisY: yAxis
-            name: qsTr("Infected ppl")
-            color: "gold"
-            pointsVisible: rangeCombo.currentValue > 0
-            width: rangeCombo.currentValue > 0 ? 3 : 2
-            onHovered: handleHovered(point, state, incrementalSeries)
-            pointLabelsVisible: rangeCombo.currentValue === 7 || rangeCombo.currentValue === 14
-            pointLabelsClipping: false
-            pointLabelsFormat: "@yPoint"
-            pointLabelsFont.pixelSize: Qt.application.font.pixelSize // hidpi oh yeah :D
+            labelsVisible: rangeCombo.currentIndex > 0
         }
     }
 
