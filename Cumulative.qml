@@ -108,7 +108,7 @@ Page {
         legend.markerShape: Legend.MarkerShapeFromSeries
         antialiasing: true
         localizeNumbers: true
-        theme: ChartView.ChartThemeBlueNcs
+        theme: ChartView.ChartThemeDark
         animationOptions: ChartView.SeriesAnimations
 
         DateTimeAxis {
@@ -160,7 +160,7 @@ Page {
             axisX: xAxis
             axisY: yAxis
             name: qsTr("Deceased")
-            color: "#000001" // "black" not accepted here :o
+            color: "red"
             width: 3
             onHovered: handleHovered(point, state, deceasedSeries)
             pointsVisible: rangeCombo.currentValue > 0

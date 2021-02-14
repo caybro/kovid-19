@@ -92,7 +92,7 @@ Page {
         legend.alignment: Qt.AlignTop
         antialiasing: true
         localizeNumbers: true
-        theme: ChartView.ChartThemeBlueNcs
+        theme: ChartView.ChartThemeDark
         legend.markerShape: Legend.MarkerShapeFromSeries
         animationOptions: ChartView.SeriesAnimations
 

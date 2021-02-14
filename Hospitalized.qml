@@ -25,12 +25,14 @@ Page {
 
     function parseData(range = -1) {
         barSeries.clear();
+        barSeries2.clear();
         var datesArr = Array();
         var bezPriznaku = Array();
         var lehky = Array();
         var stredni = Array();
         var tezky = Array();
         var hosp = Array();
+        var dead = Array();
 
         var yesterday = new Date();
         yesterday.setDate(yesterday.getDate() - 1);
@@ -61,6 +63,7 @@ Page {
             stredni.push(datapoint.stav_stredni);
             tezky.push(datapoint.stav_tezky);
             hosp.push(datapoint.pocet_hosp);
+            dead.push(datapoint.umrti);
         }
 
         // set max for the values (y) axis
@@ -71,6 +74,7 @@ Page {
         barSeries.append(qsTr("Light symptoms"), lehky);
         barSeries.append(qsTr("Medium symptoms"), stredni);
         barSeries.append(qsTr("Severe symptoms"), tezky);
+        barSeries2.append(qsTr("Deceased"), dead);
     }
 
     Component.onCompleted: downloadData()
@@ -81,7 +85,7 @@ Page {
         legend.alignment: Qt.AlignTop
         antialiasing: true
         localizeNumbers: true
-        theme: ChartView.ChartThemeBlueNcs
+        theme: ChartView.ChartThemeDark
         animationOptions: ChartView.SeriesAnimations
 
         BarCategoryAxis {
@@ -95,7 +99,7 @@ Page {
             tickType: ValueAxis.TicksDynamic
             tickInterval: 1000
             tickAnchor: 0
-            minorTickCount: 10
+            minorTickCount: rangeCombo.currentIndex > 0 ? 10 : 0
         }
 
         StackedBarSeries {
@@ -103,6 +107,14 @@ Page {
             axisX: xAxis
             axisY: yAxis
             labelsVisible: rangeCombo.currentIndex > 0
+        }
+
+        BarSeries {
+            id: barSeries2
+            axisX: xAxis
+            axisY: yAxis
+            labelsVisible: rangeCombo.currentIndex > 1
+            labelsPosition: AbstractBarSeries.LabelsOutsideEnd
         }
     }
 

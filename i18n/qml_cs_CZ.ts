@@ -76,47 +76,53 @@
         <translation>Počet lidí v nemocnici — %1</translation>
     </message>
     <message>
-        <location filename="../Hospitalized.qml" line="70"/>
+        <location filename="../Hospitalized.qml" line="73"/>
         <source>Without symptoms</source>
         <translation>Bez příznaků</translation>
     </message>
     <message>
-        <location filename="../Hospitalized.qml" line="71"/>
+        <location filename="../Hospitalized.qml" line="74"/>
         <source>Light symptoms</source>
         <translation>Lehké příznaky</translation>
     </message>
     <message>
-        <location filename="../Hospitalized.qml" line="72"/>
+        <location filename="../Hospitalized.qml" line="75"/>
         <source>Medium symptoms</source>
         <translation>Střední příznaky</translation>
     </message>
     <message>
-        <location filename="../Hospitalized.qml" line="73"/>
+        <location filename="../Hospitalized.qml" line="76"/>
         <source>Severe symptoms</source>
         <translation>Težké příznaky</translation>
     </message>
     <message>
-        <location filename="../Hospitalized.qml" line="89"/>
+        <location filename="../Hospitalized.qml" line="77"/>
+        <source>Deceased</source>
+        <translatorcomment>Zemřelí</translatorcomment>
+        <translation>Zemřelých</translation>
+    </message>
+    <message>
+        <location filename="../Hospitalized.qml" line="93"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
     <message>
-        <location filename="../Hospitalized.qml" line="117"/>
+        <location filename="../Hospitalized.qml" line="129"/>
         <source>Everything</source>
         <translation>Vše</translation>
     </message>
     <message>
-        <location filename="../Hospitalized.qml" line="121"/>
+        <location filename="../Hospitalized.qml" line="133"/>
         <source>Last Month</source>
         <translation>Poslední měsíc</translation>
     </message>
     <message>
-        <location filename="../Hospitalized.qml" line="125"/>
+        <location filename="../Hospitalized.qml" line="137"/>
         <source>Last 14 Days</source>
         <translation>Poslední 2 týdny</translation>
     </message>
     <message>
-        <location filename="../Hospitalized.qml" line="129"/>
+        <location filename="../Hospitalized.qml" line="141"/>
         <source>Last Week</source>
         <translation>Poslední týden</translation>
     </message>
